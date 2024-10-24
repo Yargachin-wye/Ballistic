@@ -1,0 +1,22 @@
+{
+  "name": "com.yargachin.ballistic",
+  "version": "1.0.0",
+  "displayName": "Ballistic System",
+  "description": "Moving Transform using AnimationCurve",
+  "unity": "2022.3.24f1",
+  "dependencies": {},
+  "keywords": [
+    "yargachin",
+    "ballistic",
+    "AnimationCurve",
+    "ubiquitous fracture"
+  ],
+  "author": {
+    "name": "yargachin",
+    "email": "henryhxv@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yargachin-wye/Ballistic.git"
+  }
+}
