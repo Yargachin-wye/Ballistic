@@ -14,6 +14,6 @@ public class BallisticExample : MonoBehaviour
 
     private void FixedUpdate()
     {
-        BallisticData.OnBallisticUpdate(ballistic, Time.fixedDeltaTime);
+        BallisticData.UpdateLocalPosition(ballistic, Time.fixedDeltaTime);
     }
 }

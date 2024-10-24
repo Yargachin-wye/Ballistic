@@ -47,26 +47,19 @@ namespace Ballistic
         public AnimationCurve movementCurve;
 
         /// <summary>
-        /// Обновляет позицию и масштаб объекта на основе баллистической траектории.
+        /// Обновляет позицию и масштаб объекта на основе баллистической траектории в мировых координатах.
         /// </summary>
         /// <param name="ballistic">Данные баллистической траектории.</param>
         /// <param name="deltaTime">Время, прошедшее с последнего обновления.</param>
-        public static void OnBallisticUpdate(BallisticData ballistic, float deltaTime)
+        public static void UpdateWorldPosition(BallisticData ballistic, float deltaTime)
         {
             float t = ballistic.elapsedTime / ballistic.duration;
             if (t > 1) return;
 
             Vector2 currentPosition = Vector2.Lerp(ballistic.startPos, ballistic.endPos, t);
+            
+            currentPosition.y += ballistic.movementCurve.Evaluate(t);
 
-            float yOffset = ballistic.movementCurve.Evaluate(t);
-            currentPosition.y += yOffset;
-
-            float currentDistanceX = Mathf.Abs(Mathf.Abs(ballistic.endPos.x) - Mathf.Abs(currentPosition.y));
-            float influenceFactor = ballistic.initialDistanceX > 0
-                ? currentDistanceX / ballistic.initialDistanceX
-                : 0;
-
-            currentPosition.y += yOffset;
             ballistic.transform.position = currentPosition;
 
             float scaleFactor = ballistic.movementCurve.Evaluate(t);
@@ -76,6 +69,30 @@ namespace Ballistic
 
             ballistic.elapsedTime += deltaTime;
             ballistic.transform.position = currentPosition;
+        }
+        /// <summary>
+        /// Обновляет позицию и масштаб объекта на основе баллистической траектории в локальных координатах.
+        /// </summary>
+        /// <param name="ballistic">Данные баллистической траектории.</param>
+        /// <param name="deltaTime">Время, прошедшее с последнего обновления.</param>
+        public static void UpdateLocalPosition(BallisticData ballistic, float deltaTime)
+        {
+            float t = ballistic.elapsedTime / ballistic.duration;
+            if (t > 1) return;
+
+            Vector2 currentPosition = Vector2.Lerp(ballistic.startPos, ballistic.endPos, t);
+            
+            currentPosition.y += ballistic.movementCurve.Evaluate(t);
+
+            ballistic.transform.localPosition = currentPosition;
+
+            float scaleFactor = ballistic.movementCurve.Evaluate(t);
+
+            ballistic.transform.localScale =
+                ballistic.startLocalScale + new Vector2(scaleFactor, scaleFactor);
+
+            ballistic.elapsedTime += deltaTime;
+            ballistic.transform.localPosition = currentPosition;
         }
     }
 }
