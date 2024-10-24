@@ -2,7 +2,6 @@
 
 ## Изменяет Transform имулируя полёт гранаты, с помощью AnimationCurve
 
-
 ### Пример:
 
 ```csharp
@@ -26,4 +25,9 @@ public class BallisticExample : MonoBehaviour
     }
 }
 ```
+### Кривая должны выглядить примерно так:
 ![img.png](img.png)
+### Параметры должны выглядить примерно так:
+![img.png](img2.png)
+### Демо:
+![img.gif](img3.gif)
