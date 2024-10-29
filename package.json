@@ -1,14 +1,15 @@
 {
-  "name": "com.yargachin.ballistic",
+  "name": "com.yargachin.2d_projectile_moving",
   "version": "1.0.0",
-  "displayName": "Ballistic System",
-  "description": "Moving Transform using AnimationCurve",
+  "displayName": "2D Projectile Moving",
+  "description": "Moving projectile for d2",
   "unity": "2022.3.24f1",
   "dependencies": {},
   "keywords": [
     "yargachin",
     "ballistic",
     "AnimationCurve",
+    "auto aim",
     "ubiquitous fracture"
   ],
   "author": {

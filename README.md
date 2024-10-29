@@ -1,5 +1,10 @@
 # Ballistic System
 
+
+
+<details>
+<summary>BallisticData</summary>
+
 ## Изменяет Transform имулируя полёт гранаты, с помощью AnimationCurve
 
 ### Пример:
@@ -37,3 +42,5 @@ public class BallisticExample : MonoBehaviour
 ![img.png](img2.png)
 ### Демо:
 ![img.gif](img3.gif)
+
+</details>
