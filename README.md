@@ -55,6 +55,9 @@ public class BallisticExample : MonoBehaviour
 
 ### Изменяет позицию и поворот для автонаведения на таргет, если проджектайл находится в близи таргета.
 
+### Демо:
+![img.gif](AutoAimData_demo.gif)
+
 ### Пример:
 ```csharp
 private void FixedUpdate()
