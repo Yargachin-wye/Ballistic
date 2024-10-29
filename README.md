@@ -1,11 +1,11 @@
-# Ballistic System
+# 2D Projectile Moving
 
-
+### Библиотека содержит в себе классы для управления
 
 <details>
 <summary>BallisticData</summary>
 
-## Изменяет Transform имулируя полёт гранаты, с помощью AnimationCurve
+### Изменяет Позицию и размер эмулируя полёт гранаты, с помощью AnimationCurve
 
 ### Пример:
 
@@ -36,11 +36,32 @@ public class BallisticExample : MonoBehaviour
     }
 }
 ```
+
 ### Кривая должны выглядить примерно так:
 ![img.png](img.png)
 ### Параметры должны выглядить примерно так:
 ![img.png](img2.png)
 ### Демо:
 ![img.gif](img3.gif)
+
+</details>
+<details>
+<summary>AutoAimData</summary>
+
+### Изменяет позицию и поворот для автонаведения на таргет, если проджектайл находится в близи таргета
+
+### Пример:
+```csharp
+private void FixedUpdate()
+{
+    Vector2 newPos = obj.transform.position;
+    Quaternion newRotation = obj.transform.rotation;
+    
+    AutoAimData.Update(autoAimData, Time.fixedDeltaTime, ref newPos, ref newRotation);
+
+    obj.transform.position = newPos;
+    obj.transform.rotation = newRotation;
+}
+```
 
 </details>
