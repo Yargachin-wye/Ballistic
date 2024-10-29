@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Ballistic
+namespace Ballistic.script
 {
     [Serializable]
     public class BallisticData
