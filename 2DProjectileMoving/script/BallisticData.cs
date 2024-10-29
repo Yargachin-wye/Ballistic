@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Ballistic.script
+namespace Ballistic._2DProjectileMoving.script
 {
     [Serializable]
     public class BallisticData

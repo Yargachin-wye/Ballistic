@@ -10,7 +10,7 @@
 
 ### Демо:
 
-![img.gif](img3.gif)
+![img.gif](2DProjectileMoving/img3.gif)
 
 ### Пример:
 
@@ -43,9 +43,9 @@ public class BallisticExample : MonoBehaviour
 ```
 
 ### Кривая должны выглядить примерно так:
-![img.png](img.png)
+![img.png](2DProjectileMoving/img.png)
 ### Параметры должны выглядить примерно так:
-![img.png](img2.png)
+![img.png](2DProjectileMoving/img2.png)
 
 </details>
 
@@ -56,7 +56,7 @@ public class BallisticExample : MonoBehaviour
 ### Изменяет позицию и поворот для автонаведения на таргет, если проджектайл находится в близи таргета.
 
 ### Демо:
-![img.gif](AutoAimData_demo.gif)
+![img.gif](2DProjectileMoving/AutoAimData_demo.gif)
 
 ### Пример:
 ```csharp

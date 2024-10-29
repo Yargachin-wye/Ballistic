@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Ballistic.script
+namespace Ballistic._2DProjectileMoving.script
 {
     /// <summary>
     /// Класс предназначен для управления поведением объекта для автонаведения.
