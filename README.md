@@ -10,7 +10,7 @@
 
 ### Демо:
 
-![img.gif](2DProjectileMoving/img3.gif)
+![img.gif](2DProjectileMoving/Ballistic_demo.gif)
 
 ### Пример:
 
