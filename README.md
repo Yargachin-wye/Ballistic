@@ -26,7 +26,7 @@ public class BallisticExample : MonoBehaviour
 
     private void Start()
     {
-        ballistic.Init();
+        ballistic.StartMoving();
     }
 
     private void FixedUpdate()

@@ -41,7 +41,7 @@ namespace Ballistic._2DProjectileMoving.script
         /// <summary>
         /// Обязательная инициализация.
         /// </summary>
-        public void Init()
+        public void StartMoving()
         {
             elapsedTime = 0;
             
