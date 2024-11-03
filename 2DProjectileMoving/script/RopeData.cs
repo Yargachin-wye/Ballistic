@@ -8,7 +8,7 @@ namespace Ballistic._2DProjectileMoving.script
     public class RopeData
     {
         [SerializeField] private int segmentCount = 20; // Количество сегментов веревки
-        [SerializeField] private float segmentLength = 0.2f; // Длина сегмента
+        [SerializeField] public float segmentLength = 0.2f; // Длина сегмента
         [SerializeField] private Vector2 gravity = new Vector2(0, -10f); // Гравитация, направленная вниз
         [SerializeField] private int verletIterations = 50; // Количество итераций Верле для стабильности
 
